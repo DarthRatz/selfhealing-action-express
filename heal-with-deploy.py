@@ -37,8 +37,8 @@ def main(build_output_file, openai_api_key):
     if filename == "no":
         print("No filename found")
         return
-    
-    print("Filename found: " + filename)
+
+    print(f"Filename found: {filename}")
 
     # Read file contents
     with open(filename, "r") as f:
@@ -80,7 +80,7 @@ def main(build_output_file, openai_api_key):
     if parsed["fix_found"] == "false":
         print("No fix found")
         return
-    
+
     print("Fix found: " + parsed["fixed_content"])
 
     # Write file
